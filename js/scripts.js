@@ -58,8 +58,25 @@ $(document).ready(function(){
 		}
 
 	})
-});
+	$(".main-unit_question-top").each(function(){
 
+		var pretitleHeight=$(this).find(".main-unit_question-title").outerHeight();
+		var titleHeight=$(this).find(".main-unit_question-title").outerHeight();
+		var sum=pretitleHeight+titleHeight;
+		var img=$(this).find(".main-unit_question-image");
+		img.css({"height":"calc(100% - "+sum+"px)"});
+	})
+});
+$(window).on("resize",function(){
+	$(".main-unit_question-top").each(function(){
+
+		var pretitleHeight=$(this).find(".main-unit_question-title").outerHeight();
+		var titleHeight=$(this).find(".main-unit_question-title").outerHeight();
+		var sum=pretitleHeight+titleHeight;
+		var img=$(this).find(".main-unit_question-image");
+		img.css({"height":"calc(100% - "+sum+"px)"});
+	})
+})
 
 /* Optional triggers
 

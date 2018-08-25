@@ -137,9 +137,12 @@ input[type=submit], input[type=button] {
 		padding:0 12px;
 	}
 	&-unit{
+		display: 	flex;
+		flex-direction:column;
+		height:100vh;
 		&-header{
-			margin-bottom: 155px;
-			height:73px;
+			
+			height:calc((100vh - 510px)/3);
 			display: flex;
 			justify-content:space-between;
 			&-segment{
@@ -156,6 +159,7 @@ input[type=submit], input[type=button] {
 			}
 		}
 		&-content{
+			
 			margin-bottom: 19px;
 			position: relative;
 			display: flex;
@@ -235,13 +239,16 @@ input[type=submit], input[type=button] {
 			}
 		}
 		&-footer{
-			margin-top: 32px;
+			height:calc((100vh - 510px)/3*2);
+			margin-top: 19px;
 			background-color: #FBCA50;
-			height:139px;
 			opacity: .5;
 		}
+		&-center{
+			margin-top: 155px;
+		}
 		&_question{
-			padding:15px 0;
+			padding:15px 0 15px;
 			&.slick-current{
 				.main-unit_question-answers-unit{
 					opacity: 1;
@@ -262,18 +269,27 @@ input[type=submit], input[type=button] {
 					}
 				}
 			}
+			&-top{
+				display: flex;
+				height:calc(100% - 215px);
+				
+				flex-direction:column;
+			}
 			&-content{
+				height:100%;
+				display: flex;
+				flex-direction:column;
 				border-radius: 10px;
 				padding:32px 6px 10px 6px;
 				background-size: cover;
-				min-height: 700px;
+				
 				background-image: url(../images/question-bg.svg);
 			}
 			&-answers{
 				&-unit{
 					display: flex;
 					align-items:center;
-					height:60px;
+					height:50px;
 					line-height: 20px;
 					background-color: #fff;
 					border-radius: 6px;
@@ -312,7 +328,7 @@ input[type=submit], input[type=button] {
 			&-title{
 				padding:0 10px;
 				color:$purple;
-				font-size: 22px;
+				font-size: 18px;
 				line-height: 30px;
 				font-weight: 900;
 				margin-bottom: 23px;
@@ -320,12 +336,17 @@ input[type=submit], input[type=button] {
 				opacity: 0;
 				transform:translateX(20%);
 			}
+			&-info{
+				margin-top:auto;
+			}
 			&-image{
 				display: flex;
 				align-items:center;
 				justify-content:center;
-				margin-bottom: -6px;
+				
 				img{
+					
+					max-height: 100%;
 					max-width: 100%;
 					@include transition(.6s);
 					transition-delay:.3s;
@@ -348,8 +369,8 @@ input[type=submit], input[type=button] {
 						opacity: 0;
 						border-radius: 10px;
 						box-shadow: 0px 10px 15px rgba(29, 0, 102, 0.4);
-						height:125px;
-						line-height: 125px;
+						height:100px;
+						line-height: 100px;
 						font-weight: 900;
 						padding:0 20px;
 						font-size: 18px;
@@ -368,17 +389,17 @@ input[type=submit], input[type=button] {
 						@include transition(.5s);
 						transform:translateX(-50%);
 						opacity: 0;
-						min-height: 125px;
+						height: 110px;
 						position: relative;
 						z-index: 1;
 						background-color: #FEFEFE;
 						border-radius: 10px;
-						padding:15px 20px;
+						padding:10px 20px;
 						&-header{
 							display: flex;
 							align-items:center;
 							justify-content:space-between;
-							margin-bottom: 17px;
+							margin-bottom: 7px;
 							&-icon{
 								background-size: cover;
 								width:20px;
