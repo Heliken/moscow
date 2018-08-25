@@ -8,7 +8,7 @@ $(document).ready(function(){
 	var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
 
 	if (isSafari && iOS) {
-	   $("body").addClass(".body_safari");
+	   $("body").addClass("body_safari");
 	}
 	$(".main-wrap").slick({
 		arrows:false,
