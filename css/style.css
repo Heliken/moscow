@@ -458,6 +458,7 @@ a {
       -ms-transform: scale(1);
       transform: scale(1); }
     .main-unit_question-top {
+      position: relative;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
