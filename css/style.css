@@ -233,6 +233,7 @@ html {
   min-width: 320px; }
 
 body {
+  overflow-y: scroll;
   font: normal normal 16px/23px Helmet,"Montserrat", sans-serif;
   background: #EEEEF0;
   color: #333;
@@ -241,7 +242,9 @@ body {
   min-height: 100%; }
 
 html, body {
-  overflow: hidden; }
+  overflow: hidden;
+  position: relative;
+  height: 100%; }
 
 a {
   color: inherit;
@@ -535,9 +538,9 @@ a {
       padding: 0 10px;
       color: #53379B;
       font-size: 18px;
-      line-height: 30px;
+      line-height: 26px;
       font-weight: 900;
-      margin-bottom: 23px;
+      margin-bottom: 15px;
       -moz-transition: all ease-in-out 0.5s;
       -o-transition: all ease-in-out 0.5s;
       -webkit-transition: all ease-in-out 0.5s;
