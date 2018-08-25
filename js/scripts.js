@@ -1,8 +1,15 @@
 /* Trigger when page is ready */
+
+
 $(document).ready(function(){
 
 	// Your functions go here
+	var isSafari = !!navigator.userAgent.match(/Version\/[\d\.]+.*Safari/);
+	var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
 
+	if (isSafari && iOS) {
+	   $("body").addClass(".body_safari");
+	}
 	$(".main-wrap").slick({
 		arrows:false,
 		fade:true,

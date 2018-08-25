@@ -119,6 +119,11 @@ input[type=submit], input[type=button] {
 .wrapper { 
 	margin:0 auto;
 }
+.body{
+	&_safari{
+		padding-bottom: 40px;
+	}
+}
 .rotate{
 	z-index: 10;
 	position: fixed;

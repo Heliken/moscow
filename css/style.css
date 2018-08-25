@@ -271,6 +271,9 @@ a {
 .wrapper {
   margin: 0 auto; }
 
+.body_safari {
+  padding-bottom: 40px; }
+
 .rotate {
   z-index: 10;
   position: fixed;
