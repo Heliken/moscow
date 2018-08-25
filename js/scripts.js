@@ -49,6 +49,7 @@ $(document).ready(function(){
 		$(".progress-unit").eq("0").addClass("progress-unit_current");
 	})
 	$(".main-unit_question-answers-unit").click(function(){
+		var text=$(this).html();
 		$(this).parents(".main-unit_question-info").slick("slickNext");
 		if($(this).hasClass("main-unit_question-answers-unit_correct")){
 			var current=$(".progress-unit_current").addClass("progress-unit_correct");
@@ -56,7 +57,7 @@ $(document).ready(function(){
 		} else{
 			var current=$(".progress-unit_current").addClass("progress-unit_wrong");
 		}
-
+		$(this).parents(".main-unit_question-info").find(".main-unit_question-results-unit_wrong .main-unit_question-results-unit-info-header-title").html(text);
 	})
 	$(".main-unit_question-top").each(function(){
 

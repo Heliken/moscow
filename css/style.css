@@ -268,6 +268,37 @@ a {
 .wrapper {
   margin: 0 auto; }
 
+.rotate {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #FBCA50;
+  color: #53379B;
+  display: none; }
+  .rotate-text {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    max-width: 320px; }
+
+@media (orientation: landscape) and (max-height: 568px) {
+  .rotate {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; } }
+
 @-webkit-keyframes imgAnimation {
   0% {
     opacity: 0;
@@ -597,6 +628,7 @@ a {
           justify-content: space-between;
           margin-bottom: 7px; }
           .main-unit_question-results-unit-info-header-icon {
+            min-width: 20px;
             background-size: cover;
             width: 20px;
             height: 20px; }
@@ -605,14 +637,25 @@ a {
             .main-unit_question-results-unit-info-header-icon_green {
               background-image: url(../images/face_green.svg); }
           .main-unit_question-results-unit-info-header-title {
-            font-size: 18px;
-            line-height: 31px;
+            min-height: 31px;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            font-size: 17px;
+            line-height: 18px;
             font-weight: 600;
             color: #53379B; }
         .main-unit_question-results-unit-info-text {
           font-size: 14px;
           font-weight: 600;
           line-height: 17px; }
+          .main-unit_question-results-unit-info-text_red {
+            color: #E8244C; }
+          .main-unit_question-results-unit-info-text_green {
+            color: #2EAE70; }
     .main-unit_question-results.slick-current .main-unit_question-results-unit-button {
       -webkit-transform: translateX(0);
       -ms-transform: translateX(0);
@@ -630,6 +673,7 @@ a {
   .main-unit_final {
     padding: 15px 0; }
     .main-unit_final-content {
+      height: calc(100% - 40px);
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -640,7 +684,6 @@ a {
       border-radius: 10px;
       padding: 32px 16px 22px 16px;
       background-size: cover;
-      min-height: 656px;
       background-image: url(../images/end-bg.svg);
       margin-bottom: 22px; }
       .main-unit_final-content .main-unit-content-pretitle {

@@ -117,7 +117,31 @@ input[type=submit], input[type=button] {
 .wrapper { 
 	margin:0 auto;
 }
-
+.rotate{
+	z-index: 10;
+	position: fixed;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	display: flex;
+	align-items:center;
+	justify-content:center;
+	background-color: $yellow;
+	color:$purple;
+	display: none;
+	&-text{
+		font-weight: 600;
+		font-size: 18px;
+		line-height: 22px;
+		max-width: 320px;
+	}
+}
+@media (orientation: landscape) and(max-height:568px ){
+	.rotate{
+		display: flex;
+	}
+}
 @keyframes imgAnimation {
   0%   {
    	opacity: 0;
@@ -403,6 +427,7 @@ input[type=submit], input[type=button] {
 							justify-content:space-between;
 							margin-bottom: 7px;
 							&-icon{
+								min-width: 20px;
 								background-size: cover;
 								width:20px;
 								height:20px;
@@ -414,8 +439,11 @@ input[type=submit], input[type=button] {
 								}
 							}
 							&-title{
-								font-size:18px;
-								line-height: 31px;
+								min-height: 31px;
+								display: flex;
+								align-items:center;
+								font-size:17px;
+								line-height: 18px;
 								font-weight: 600;
 								color:$purple;
 							}
@@ -425,6 +453,12 @@ input[type=submit], input[type=button] {
 							font-size: 14px;
 							font-weight: 600;
 							line-height: 17px;
+							&_red{
+								color:#E8244C;
+							}
+							&_green{
+								color:#2EAE70;
+							}
 						}
 					}
 				}
@@ -452,12 +486,13 @@ input[type=submit], input[type=button] {
 		&_final{
 			padding:15px 0;
 			&-content{
+				height:calc(100% - 40px);
 				display: flex;
 				flex-direction:column;
 				border-radius: 10px;
 				padding:32px 16px 22px 16px;
 				background-size: cover;
-				min-height: 656px;
+				
 				background-image: url(../images/end-bg.svg);
 				margin-bottom: 22px;
 				.main-unit-content-pretitle{
