@@ -271,7 +271,7 @@ a {
 .wrapper {
   margin: 0 auto; }
 
-.body_safari {
+.body_safari .main-unit {
   padding-bottom: 40px; }
 
 .rotate {

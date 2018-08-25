@@ -121,7 +121,9 @@ input[type=submit], input[type=button] {
 }
 .body{
 	&_safari{
-		padding-bottom: 40px;
+		.main-unit{
+			padding-bottom: 40px;
+		}
 	}
 }
 .rotate{
