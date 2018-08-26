@@ -10,6 +10,11 @@ $(document).ready(function(){
 	if (isSafari && iOS) {
 	   $("body").addClass("body_safari");
 	}
+	var ua = navigator.userAgent.toLowerCase();
+	var isAndroid = ua.indexOf("android") > -1; //&& ua.indexOf("mobile");
+	if(isAndroid) {
+	   $("body").addClass("body_safari");
+	}
 	$(".main-wrap").slick({
 		arrows:false,
 		fade:true,
@@ -66,33 +71,28 @@ $(document).ready(function(){
 		}
 		$(this).parents(".main-unit_question-info").find(".main-unit_question-results-unit_wrong .main-unit_question-results-unit-info-header-title").html(text);
 	})
+	
+	imageSize();
+});
+function imageSize(){
 	$(".main-unit_question-top").each(function(){
 
-		var pretitleHeight=$(this).find(".main-unit_question-title").outerHeight();
-		var titleHeight=$(this).find(".main-unit_question-title").outerHeight();
+		var pretitleHeight=$(this).find(".main-unit_question-pretitle").outerHeight(true);
+		var titleHeight=$(this).find(".main-unit_question-title").outerHeight(true);
 		var sum=pretitleHeight+titleHeight;
 		var img=$(this).find(".main-unit_question-image");
 		img.css({"height":"calc(100% - "+sum+"px)"});
 	})
 	$(".main-unit_final-top").each(function(){
-		var pretitleHeight=$(this).find(".main-unit-content-pretitle").outerHeight();
-		var titleHeight=$(this).find(".main-unit-content-title").outerHeight();
+		var pretitleHeight=$(this).find(".main-unit-content-pretitle").outerHeight(true);
+		var titleHeight=$(this).find(".main-unit-content-title").outerHeight(true);
 		var sum=pretitleHeight+titleHeight;
-		console.log(sum);
 		var img=$(this).find(".main-unit_final-image");
 		img.css({"height":"calc(100% - "+sum+"px)"});
 	});
-});
-$(window).on("resize",function(){
-	$(".main-unit_question-top").each(function(){
-
-		var pretitleHeight=$(this).find(".main-unit_question-title").outerHeight();
-		var titleHeight=$(this).find(".main-unit_question-title").outerHeight();
-		var sum=pretitleHeight+titleHeight;
-		var img=$(this).find(".main-unit_question-image");
-		img.css({"height":"calc(100% - "+sum+"px)"});
-	})
-
+}
+$(window).on("resize load",function(){
+	imageSize();
 })
 
 /* Optional triggers

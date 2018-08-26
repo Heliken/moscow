@@ -119,13 +119,7 @@ input[type=submit], input[type=button] {
 .wrapper { 
 	margin:0 auto;
 }
-.body{
-	&_safari{
-		.main-unit{
-			padding-bottom: 40px;
-		}
-	}
-}
+
 .rotate{
 	z-index: 10;
 	position: fixed;
@@ -283,7 +277,7 @@ input[type=submit], input[type=button] {
 			margin-top: 155px;
 		}
 		&_question{
-			padding:15px 0 15px;
+			padding:5px 0 15px;
 			&.slick-current{
 				.main-unit_question-answers-unit{
 					opacity: 1;
@@ -316,7 +310,7 @@ input[type=submit], input[type=button] {
 				display: flex;
 				flex-direction:column;
 				border-radius: 10px;
-				padding:32px 6px 10px 6px;
+				padding:20px 6px 10px 6px;
 				background-size: cover;
 				
 				background-image: url(../images/question-bg.svg);
@@ -544,7 +538,7 @@ input[type=submit], input[type=button] {
 	position: absolute;
 	border-radius: 10px;
 	z-index: 1;
-	top:21px;
+	top:10px;
 	width:calc(100% - 36px);
 	left:50%;
 	opacity: 0;
@@ -593,6 +587,13 @@ input[type=submit], input[type=button] {
 	&_green{
 		box-shadow: 0px 10px 15px rgba(0, 170, 88, 0.4);
 		background-color: $green;
+	}
+}
+.body{
+	&_safari{
+		.main-unit{
+			padding-bottom: 75px;
+		}
 	}
 }
 @media(max-width:374px){
