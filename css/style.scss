@@ -724,6 +724,7 @@ input[type=submit], input[type=button] {
 							position: absolute;
 							&:nth-child(2){
 								opacity: 0;
+								transition-delay:.1s;
 
 							}
 						}

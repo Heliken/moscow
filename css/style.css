@@ -866,7 +866,10 @@ a {
     max-width: 80%;
     position: absolute; }
     .test_alt .test-unit_question-image img:nth-child(2) {
-      opacity: 0; }
+      opacity: 0;
+      -webkit-transition-delay: .1s;
+      -o-transition-delay: .1s;
+      transition-delay: .1s; }
   .test_alt .test-unit_final .test-unit-content-pretitle {
     text-align: left; }
   .test_alt .test-unit_final-image {
