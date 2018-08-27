@@ -855,21 +855,43 @@ a {
     text-align: center; }
   .test_alt .test-unit-content-title {
     text-align: center; }
-  .test_alt .test-unit_question_answered .test-unit_question-image img:nth-child(1) {
+  .test_alt .test-unit_question.slick-current .test-unit_question-image img {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1); }
+  .test_alt .test-unit_question_answered .test-unit_question-image:not(.test-unit_question-image_2) {
+    opacity: 0;
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
-    transform: translateX(-50%);
-    opacity: 0; }
-  .test_alt .test-unit_question_answered .test-unit_question-image img:nth-child(2) {
-    opacity: 1; }
-  .test_alt .test-unit_question-image img {
-    max-width: 80%;
-    position: absolute; }
-    .test_alt .test-unit_question-image img:nth-child(2) {
-      opacity: 0;
-      -webkit-transition-delay: .1s;
-      -o-transition-delay: .1s;
-      transition-delay: .1s; }
+    transform: translateX(-50%); }
+  .test_alt .test-unit_question_answered .test-unit_question-image_2 {
+    z-index: 1; }
+    .test_alt .test-unit_question_answered .test-unit_question-image_2 img {
+      -webkit-transform: scale(1) !important;
+      -ms-transform: scale(1) !important;
+      transform: scale(1) !important;
+      opacity: 1 !important; }
+  .test_alt .test-unit_question-image {
+    -moz-transition: all ease-in-out 0.3s;
+    -o-transition: all ease-in-out 0.3s;
+    -webkit-transition: all ease-in-out 0.3s;
+    transition: all ease-in-out 0.3s;
+    position: relative; }
+    .test_alt .test-unit_question-image_2 {
+      z-index: 0;
+      bottom: 0;
+      width: 100%;
+      position: absolute; }
+      .test_alt .test-unit_question-image_2 img {
+        -webkit-transform: scale(0) !important;
+        -ms-transform: scale(0) !important;
+        transform: scale(0) !important;
+        opacity: 0 !important; }
+    .test_alt .test-unit_question-image img {
+      top: 0%;
+      left: 0%;
+      max-width: 90%;
+      position: relative; }
   .test_alt .test-unit_final .test-unit-content-pretitle {
     text-align: left; }
   .test_alt .test-unit_final-image {

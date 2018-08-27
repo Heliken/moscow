@@ -705,28 +705,47 @@ input[type=submit], input[type=button] {
 					}
 				}
 				&_question{
+					&.slick-current{
+						 .test-unit_question-image img{
+						 	transform:scale(1);
+						 }
+					}
 					&_answered{
 						.test-unit_question-image{
-							img{
-								&:nth-child(1){
-									transform:translateX(-50%);
-									opacity: 0;
-								}
-								&:nth-child(2){
-									opacity: 1;
+							&:not(.test-unit_question-image_2){
+								opacity: 0;
+								transform:translateX(-50%);
+							}
+							&_2{
+								z-index: 1;
+								img{
+									transform:scale(1)!important;
+									opacity: 1!important;
 								}
 							}
 						}
 					}
 					&-image{
-						img{
-							max-width: 80%;
+						@include transition(.3s);
+						position: relative;
+						&_2{
+							z-index: 0;
+							bottom:0;
+							width:100%;
 							position: absolute;
-							&:nth-child(2){
-								opacity: 0;
-								transition-delay:.1s;
-
+							img{
+								transform:scale(0)!important;
+								opacity: 0!important;
 							}
+						}
+
+						img{
+							top:0%;
+							left:0%;
+							
+							max-width: 90%;
+							position: relative;
+							
 						}
 					}
 				}
