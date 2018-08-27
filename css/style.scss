@@ -139,6 +139,7 @@ input[type=submit], input[type=button] {
 		max-width: 320px;
 	}
 }
+
 @media (orientation: landscape) and(max-height:568px ){
 	.rotate{
 		display: flex;
@@ -690,6 +691,60 @@ input[type=submit], input[type=button] {
 				}
 			}
 
+		}
+	}
+	&_alt{
+		.test{
+			&-unit{
+				&-content{
+					&-pretitle{
+						text-align: center;
+					}
+					&-title{
+						text-align: center;
+					}
+				}
+				&_question{
+					&_answered{
+						.test-unit_question-image{
+							img{
+								&:nth-child(1){
+									transform:translateX(-50%);
+									opacity: 0;
+								}
+								&:nth-child(2){
+									opacity: 1;
+								}
+							}
+						}
+					}
+					&-image{
+						img{
+							max-width: 80%;
+							position: absolute;
+							&:nth-child(2){
+								opacity: 0;
+
+							}
+						}
+					}
+				}
+				&_final{
+					.test{
+						&-unit{
+							&-content{
+								&-pretitle{
+									text-align: left;
+								}
+							}
+						}
+					}
+					&-image{
+						margin-bottom: 25px;
+						height:130px!important;
+					}
+				}
+			}
 		}
 	}
 }

@@ -851,6 +851,27 @@ a {
         .test-unit_final-image img {
           max-height: 100%;
           max-width: 100%; }
+  .test_alt .test-unit-content-pretitle {
+    text-align: center; }
+  .test_alt .test-unit-content-title {
+    text-align: center; }
+  .test_alt .test-unit_question_answered .test-unit_question-image img:nth-child(1) {
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    opacity: 0; }
+  .test_alt .test-unit_question_answered .test-unit_question-image img:nth-child(2) {
+    opacity: 1; }
+  .test_alt .test-unit_question-image img {
+    max-width: 80%;
+    position: absolute; }
+    .test_alt .test-unit_question-image img:nth-child(2) {
+      opacity: 0; }
+  .test_alt .test-unit_final .test-unit-content-pretitle {
+    text-align: left; }
+  .test_alt .test-unit_final-image {
+    margin-bottom: 25px;
+    height: 130px !important; }
 
 .progress {
   padding: 2px;

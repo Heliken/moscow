@@ -1,0 +1,194 @@
+include ./includes/components.jade
+
+doctype html
+html
+	+head ('Index')
+
+	body
+		
+		.header верхнее меню
+		.test.test_alt
+			.filler.filler_double
+				.filler-unit
+				.filler-unit
+			.filler.filler_triple
+				.filler-unit
+				.filler-unit
+				.filler-unit
+			.filler
+				.filler-unit
+			.rotate
+				.rotate-text Переверните устройство!
+			
+			.test-wrap
+				
+				.progress
+					.progress-unit.progress-unit_current
+					.progress-unit
+					.progress-unit
+					.progress-unit
+				.test-unit
+					.test-unit-header
+						.test-unit-header-segment.test-unit-header-segment_blue
+						.test-unit-header-segment.test-unit-header-segment_red
+					.test-unit-center
+						.test-unit-content
+							img(src="images/test-main-image.png" alt="").test-unit-content-image
+							.test-unit-content-pretitle Тест
+							.test-unit-content-title Вы уверены, что знаете Москву? Докажите это!
+							.test-unit-content-button.button.button_red Пройти тест!
+						.test-unit-socials
+							a(href="#/").test-unit-socials-unit.test-unit-socials-unit_facebook
+								.test-unit-socials-unit-icon
+								.test-unit-socials-unit-counter 14558
+							a(href="#/").test-unit-socials-unit.test-unit-socials-unit_vk
+								.test-unit-socials-unit-icon
+								.test-unit-socials-unit-counter 5327
+							a(href="#/").test-unit-socials-unit.test-unit-socials-unit_insta
+								.test-unit-socials-unit-icon
+								.test-unit-socials-unit-counter 6457
+					.test-unit-footer
+				.test-unit.test-unit_question
+					.test-unit_question-content
+						.test-unit_question-top
+							.test-unit_question-pretitle Вопрос 1 из 4
+							.test-unit_question-title Какая это улица до реализации «adblock кампании»?
+							.test-unit_question-image
+								img(src="images/question02-01.png" alt="")
+								img(src="images/question02-02.png" alt="")
+						.test-unit_question-info
+							.test-unit_question-answers
+								.test-unit_question-answers-unit Мясницкая
+								.test-unit_question-answers-unit Арбат
+								.test-unit_question-answers-unit.test-unit_question-answers-unit_correct Маросейка
+								.test-unit_question-answers-unit Это точно Москва?
+							.test-unit_question-results
+								.test-unit_question-results-unit.test-unit_question-results-unit_wrong
+									.test-unit_question-results-unit-button Ясно. Едем дальше!
+									.test-unit_question-results-unit-info
+										.test-unit_question-results-unit-info-header
+											.test-unit_question-results-unit-info-header-title Березовая роща
+											.test-unit_question-results-unit-info-header-icon.test-unit_question-results-unit-info-header-icon_red
+										.test-unit_question-results-unit-info-text.test-unit_question-results-unit-info-text_red Нет. Совсем уж забыли, старички, а это была Маросейка.
+								.test-unit_question-results-unit.test-unit_question-results-unit_correct
+									.test-unit_question-results-unit-button Следующий вопрос!
+									.test-unit_question-results-unit-info
+										.test-unit_question-results-unit-info-header
+											.test-unit_question-results-unit-info-header-title Маросейка
+											.test-unit_question-results-unit-info-header-icon.test-unit_question-results-unit-info-header-icon_green
+										.test-unit_question-results-unit-info-text.test-unit_question-results-unit-info-text_green Верно! Маросейку теперь не узнать, правда?
+				.test-unit.test-unit_question
+					.test-unit_question-content
+						.test-unit_question-top
+							.test-unit_question-pretitle Вопрос 2 из 4
+							.test-unit_question-title Что стало главной достопримечательностью в этом долгострое?
+							.test-unit_question-image
+								img(src="images/question02-03.png" alt="")
+								img(src="images/question02-04.png" alt="")
+						.test-unit_question-info
+							.test-unit_question-answers
+								.test-unit_question-answers-unit.test-unit_question-answers-unit_correct Стена Белого города
+								.test-unit_question-answers-unit Башня «Восток»
+								.test-unit_question-answers-unit Фонтан на ВДНХ
+								.test-unit_question-answers-unit Сами строители
+							.test-unit_question-results
+								.test-unit_question-results-unit.test-unit_question-results-unit_wrong
+									.test-unit_question-results-unit-button Ясно. Едем дальше!
+									.test-unit_question-results-unit-info
+										.test-unit_question-results-unit-info-header
+											.test-unit_question-results-unit-info-header-title Цены на недвижимость
+											.test-unit_question-results-unit-info-header-icon.test-unit_question-results-unit-info-header-icon_red
+										.test-unit_question-results-unit-info-text.test-unit_question-results-unit-info-text_red Хорошая попытка, но это стена Белого города
+								.test-unit_question-results-unit.test-unit_question-results-unit_correct
+									.test-unit_question-results-unit-button Следующий вопрос!
+									.test-unit_question-results-unit-info
+										.test-unit_question-results-unit-info-header
+											.test-unit_question-results-unit-info-header-title Стена Белого города
+											.test-unit_question-results-unit-info-header-icon.test-unit_question-results-unit-info-header-icon_green
+										.test-unit_question-results-unit-info-text.test-unit_question-results-unit-info-text_green О, да! Уже были там?
+				.test-unit.test-unit_question
+					.test-unit_question-content
+						.test-unit_question-top
+							.test-unit_question-pretitle Вопрос 3 из 4
+							.test-unit_question-title Для кого построили отдельный павильон после реконструкции Крымской набережной?
+							.test-unit_question-image
+								img(src="images/question02-05.png" alt="")
+								img(src="images/question02-06.png" alt="")
+						.test-unit_question-info
+							.test-unit_question-answers
+								.test-unit_question-answers-unit Для пловцов
+								.test-unit_question-answers-unit.test-unit_question-answers-unit_correct Для художников
+								.test-unit_question-answers-unit Фанатам памятника Петру I
+								.test-unit_question-answers-unit Для детей
+							.test-unit_question-results
+								.test-unit_question-results-unit.test-unit_question-results-unit_wrong
+									.test-unit_question-results-unit-button Ясно. Едем дальше!
+									.test-unit_question-results-unit-info
+										.test-unit_question-results-unit-info-header
+											.test-unit_question-results-unit-info-header-title Неправильный ответ
+											.test-unit_question-results-unit-info-header-icon.test-unit_question-results-unit-info-header-icon_red
+										.test-unit_question-results-unit-info-text.test-unit_question-results-unit-info-text_red Неправильно, для художников. И рядом ведь ЦДХ.
+								.test-unit_question-results-unit.test-unit_question-results-unit_correct
+									.test-unit_question-results-unit-button Следующий вопрос!
+									.test-unit_question-results-unit-info
+										.test-unit_question-results-unit-info-header
+											.test-unit_question-results-unit-info-header-title Для художников
+											.test-unit_question-results-unit-info-header-icon.test-unit_question-results-unit-info-header-icon_green
+										.test-unit_question-results-unit-info-text.test-unit_question-results-unit-info-text_green Правильно. Теперь и в зиму тепло будет выбирать картины.
+				.test-unit.test-unit_question
+					.test-unit_question-content
+						.test-unit_question-top
+							.test-unit_question-pretitle Вопрос 4 из 4
+							.test-unit_question-title Как называется этот торговый объект на Лубянке до реконструкции?
+							.test-unit_question-image
+								img(src="images/question02-07.png" alt="")
+								img(src="images/question02-08.png" alt="")
+						.test-unit_question-info
+							.test-unit_question-answers
+								.test-unit_question-answers-unit Метро 2033
+								.test-unit_question-answers-unit.test-unit_question-answers-unit_correct Центральный детский мир
+								.test-unit_question-answers-unit Книжный магазин
+								.test-unit_question-answers-unit Торговый центр «Наутилус»
+							.test-unit_question-results
+								.test-unit_question-results-unit.test-unit_question-results-unit_wrong
+									.test-unit_question-results-unit-button Ясно. Едем дальше!
+									.test-unit_question-results-unit-info
+										.test-unit_question-results-unit-info-header
+											.test-unit_question-results-unit-info-header-title Неправильный ответ
+											.test-unit_question-results-unit-info-header-icon.test-unit_question-results-unit-info-header-icon_red
+										.test-unit_question-results-unit-info-text.test-unit_question-results-unit-info-text_red Ха! Нет, это культовый Центральный детский мир.
+								.test-unit_question-results-unit.test-unit_question-results-unit_correct
+									.test-unit_question-results-unit-button Следующий вопрос!
+									.test-unit_question-results-unit-info
+										.test-unit_question-results-unit-info-header
+											.test-unit_question-results-unit-info-header-title Центральный детский мир
+											.test-unit_question-results-unit-info-header-icon.test-unit_question-results-unit-info-header-icon_green
+										.test-unit_question-results-unit-info-text.test-unit_question-results-unit-info-text_green Ну конечно! Тот самый Центральный детский мир.
+				.test-unit.test-unit_final
+					.test-unit_final-content
+						.test-unit_final-top
+							.test-unit-content-pretitle Конец
+							.test-unit_final-image
+								img(src="images/end-image.png" alt="")
+							.test-unit-content-title Вы — настоящий краевед! Ваши друзья об этом знают?
+							
+						.test-unit_final-button.button.button_green Пройти тест еще раз
+					.test-unit-socials
+						a(href="#/").test-unit-socials-unit.test-unit-socials-unit_facebook
+							.test-unit-socials-unit-icon
+							.test-unit-socials-unit-counter 14558
+						a(href="#/").test-unit-socials-unit.test-unit-socials-unit_vk
+							.test-unit-socials-unit-icon
+							.test-unit-socials-unit-counter 5327
+						a(href="#/").test-unit-socials-unit.test-unit-socials-unit_insta
+							.test-unit-socials-unit-icon
+							.test-unit-socials-unit-counter 6457
+			.filler.filler_double
+				.filler-unit
+				.filler-unit
+			.filler.filler_triple
+				.filler-unit
+				.filler-unit
+				.filler-unit
+			.filler
+				.filler-unit

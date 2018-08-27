@@ -73,6 +73,7 @@ $(document).ready(function(){
 	})
 	$(".test-unit_question-answers-unit").click(function(){
 		var text=$(this).html();
+		$(this).parents(".test-unit_question").addClass("test-unit_question_answered");
 		$(this).parents(".test-unit_question-info").slick("slickNext");
 		if($(this).hasClass("test-unit_question-answers-unit_correct")){
 			var current=$(".progress-unit_current").addClass("progress-unit_correct");
