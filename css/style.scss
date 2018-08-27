@@ -55,7 +55,6 @@ html {
 	min-width:320px; 
 }
 body {
-	overflow-y: scroll;
 	font:normal normal 16px/23px Helmet,"Montserrat", sans-serif; 
 	background:#EEEEF0;
 	color:#333;
@@ -64,7 +63,7 @@ body {
 	min-height:100%;
 }
 html,body{
-	overflow:hidden;
+	//overflow:hidden;
     position: relative;
     height: 100%;
 }
@@ -158,20 +157,147 @@ input[type=submit], input[type=button] {
    	opacity: 1; 
   }
 }
-.main{
+.header{
+	z-index: 1000;
+	color:#fff;
+	text-align: center;
+	line-height: 50px;
+	position: fixed;
+	top:0;
+	height:50px;
+	width:100%;
+	left:0;
+	background-color: #000;
+}
+.toTest{
+	color:$red;
+	font-size: 20px;
+	text-transform: uppercase;
+}
+.filler{
+	margin-bottom: 15px;
+	display: flex;
+	height:200px;
+	&:first-child{
+		margin-top: 60px;
+	}
+	&_double{
+		height:150px;
+	}
+	&_triple{
+		height:90px;
+	}
+	&-unit{
+		flex:1;
+		height:100%;
+		margin-right: 5px;
+		&:last-child{
+			margin-right: 0;
+		}
+		opacity: .5;
+		&:nth-child(1){
+			background-color: $purple;
+		}
+		&:nth-child(2){
+			background-color: $yellow;
+		}
+		&:nth-child(3){
+			background-color: $red;
+		}
+	}
+}
+.test{
+	background-color:#EEEEF0;
 	&-wrap{
+
 		margin:0 auto;
+		margin-top: 50px;
+		margin-bottom: 50px;
 		width:100%;
 		max-width: 767px;
 		padding:0 12px;
+		height:calc(100vh - 50px);
+		&>.slick-list{
+			height:100%;
+			&>.slick-track{
+				height:100%;
+			}
+		}
+		&_simple{
+			.test{
+				&-unit{
+					&-content{
+						&-pretitle{
+							text-align: center;
+						}
+						&-title{
+							text-align: center;
+						}
+					}
+					&_final{
+						.test-unit-content-pretitle{
+							text-align: left;
+						}
+						.test-unit-content-title{
+							margin-bottom: 20vh;
+						}
+						.test-unit-content-image{
+							align-items:flex-start;
+						}
+					}
+					&_question{
+						&-pretitle{
+							text-align: center;
+							&_preBig{
+								margin-bottom:10px;
+							}
+						}
+						&-title{
+							font-size: 22px;
+							line-height: 29px;
+							text-align: center;
+							&_big{
+								font-size: 30px;
+								line-height: 30px;
+							}
+						}
+						&-image{
+							@include transition(.3s);
+							transform:translateX(0);
+							
+							&_move{
+
+								transform:translateX(-50%);
+							}
+						}
+						&-content{
+							padding-bottom: 50px;
+						}
+						&-top{
+
+							height:calc(100% - 70px);
+						}
+						&:nth-child(2n-1){
+							.test-unit_question-image{
+								img{
+									opacity: 1!important;
+									transform: scale(1)!important;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+			
 	}
 	&-unit{
 		display: 	flex;
 		flex-direction:column;
-		height:100vh;
+		height:100%;
 		&-header{
-			
-			height:calc((100vh - 510px)/3);
+			//flex:1;
+			height:73px;
 			display: flex;
 			justify-content:space-between;
 			&-segment{
@@ -197,7 +323,7 @@ input[type=submit], input[type=button] {
 			height:306px;
 			border-radius: 10px;
 			background-size: cover;
-			background-image: url(../images/main-bg.svg);
+			background-image: url(../images/test-main-bg.svg);
 			&-image{
 				left:50%;
 				transform:translateX(-50%);
@@ -237,7 +363,7 @@ input[type=submit], input[type=button] {
 					margin-right: 0;
 				}
 				&_facebook{
-					.main-unit-socials-unit-icon{
+					.test-unit-socials-unit-icon{
 						width:8px;
 						height:18px;
 						background-image: url(../images/socials-sprite.svg);
@@ -245,7 +371,7 @@ input[type=submit], input[type=button] {
 					}
 				}
 				&_vk{
-					.main-unit-socials-unit-icon{
+					.test-unit-socials-unit-icon{
 						width:20px;
 						height:11px;
 						background-position: -58px -4px;
@@ -254,7 +380,7 @@ input[type=submit], input[type=button] {
 					} 
 				}
 				&_insta{
-					.main-unit-socials-unit-icon{
+					.test-unit-socials-unit-icon{
 						width:17px;
 						height:17px;
 						background-position: -125px -1px;
@@ -268,8 +394,9 @@ input[type=submit], input[type=button] {
 			}
 		}
 		&-footer{
-			height:calc((100vh - 510px)/3*2);
-			margin-top: 19px;
+			flex:1;
+			height:139px;
+			margin-top: 32px;
 			background-color: #FBCA50;
 			opacity: .5;
 		}
@@ -277,21 +404,21 @@ input[type=submit], input[type=button] {
 			margin-top: 155px;
 		}
 		&_question{
-			padding:5px 0 15px;
+			padding:26px 0 10px 0;
 			&.slick-current{
-				.main-unit_question-answers-unit{
+				.test-unit_question-answers-unit{
 					opacity: 1;
 					transform:translateX(0%);
 				}
-				.main-unit_question-pretitle{
+				.test-unit_question-pretitle{
 					opacity: 1;
 					transform:translateX(0%);
 				}
-				.main-unit_question-title{
+				.test-unit_question-title{
 					opacity: 1;
 					transform:translateX(0%);
 				}
-				.main-unit_question-image{
+				.test-unit_question-image{
 					img{
 						opacity: 1;
 						transform:scale(1);
@@ -310,12 +437,13 @@ input[type=submit], input[type=button] {
 				display: flex;
 				flex-direction:column;
 				border-radius: 10px;
-				padding:20px 6px 10px 6px;
+			    padding: 32px 6px 5px 6px;
 				background-size: cover;
 				
 				background-image: url(../images/question-bg.svg);
 			}
 			&-answers{
+				display: block;
 				&-unit{
 					display: flex;
 					align-items:center;
@@ -346,10 +474,12 @@ input[type=submit], input[type=button] {
 				}
 			}
 			&-pretitle{
+				font-size: 16px;
+				line-height: 23px;
 				color:$purple;
 				font-weight: 600;
 				padding:0 10px;
-				margin-bottom: 5px;
+			    margin-bottom: 6px;
 				@include transition(.5s);
 				opacity: 0;
 				transform:translateX(-20%);
@@ -359,12 +489,13 @@ input[type=submit], input[type=button] {
 				padding:0 10px;
 				color:$purple;
 				font-size: 18px;
-				line-height: 26px;
+				line-height: 24px;
 				font-weight: 900;
-				margin-bottom: 15px;
+				margin-bottom: 10px;
 				@include transition(.5s);
 				opacity: 0;
 				transform:translateX(20%);
+				margin-bottom: 20px;
 			}
 			&-info{
 				margin-top:auto;
@@ -386,7 +517,7 @@ input[type=submit], input[type=button] {
 
 			}
 			&-results{
-				
+				display: block;
 				
 				&-unit{
 					display: none;
@@ -467,28 +598,63 @@ input[type=submit], input[type=button] {
 					}
 				}
 				&.slick-current{
-					.main-unit_question-results-unit-button{
+					.test-unit_question-results-unit-button{
 						transform:translateX(0);
 						opacity: 1;
 					}
-					.main-unit_question-results-unit-info{
+					.test-unit_question-results-unit-info{
 						transform:translateX(0);
 						opacity: 1;
 					}
 				}
 				&_correct{
-					.main-unit_question-results-unit_correct{
+					.test-unit_question-results-unit_correct{
 						display: block;
 					}
-					.main-unit_question-results-unit_wrong{
+					.test-unit_question-results-unit_wrong{
 						display: none;
 					}
 				}
 
 			}
+			&-button{
+				background-color: $purple;
+				border-radius: 10px;
+				box-shadow: 0px 10px 15px rgba(29, 0, 102, 0.4);
+				width:260px;
+				margin:0 auto;
+				height:70px;
+				text-align: center;
+				line-height: 70px;
+				font-size: 18px;
+				font-weight: 900;
+				color:#fff;
+				margin-top:auto;
+				position: relative;
+				&_show{
+					padding-right: 50px;
+					&:before{
+					    position: absolute;
+				        right: 30px;
+	   					top: 1px;
+					    content: url(../images/icon-wifi.svg);
+					}
+				}
+				&_next{
+					text-align: center;
+					padding-right: 25px;
+					&:before{
+					    position: absolute;
+				        right: 24px;
+	   					top: 4px;
+					    content: url(../images/arrow-next_small.svg);
+					}
+				}
+			}
 		}
 		&_final{
-			padding:15px 0;
+			padding:26px 0 15px 0;
+
 			&-top{
 				display: flex;
 				position: relative;
@@ -496,7 +662,7 @@ input[type=submit], input[type=button] {
 				height:calc(100% - 56px);
 			}
 			&-content{
-				height:calc(100% - 40px);
+				height:calc(100% - 44px);
 				display: flex;
 				flex-direction:column;
 				border-radius: 10px;
@@ -505,12 +671,10 @@ input[type=submit], input[type=button] {
 				
 				background-image: url(../images/end-bg.svg);
 				margin-bottom: 22px;
-				.main-unit-content-pretitle{
-					margin-bottom: 6px;
+				.test-unit-content-pretitle{
+					margin-bottom: 12px;
 				}
-				.main-unit-content-title{
-					margin-bottom: 30px;
-				}
+				
 			}
 			&-button{
 				margin-top:auto;
@@ -538,7 +702,7 @@ input[type=submit], input[type=button] {
 	position: absolute;
 	border-radius: 10px;
 	z-index: 1;
-	top:10px;
+	top:32px;
 	width:calc(100% - 36px);
 	left:50%;
 	opacity: 0;
@@ -591,13 +755,14 @@ input[type=submit], input[type=button] {
 }
 .body{
 	&_safari{
-		.main-unit{
+		.test-unit{
 			padding-bottom: 75px;
 		}
 	}
 }
+/*
 @media(max-width:374px){
-	.main{
+	.test{
 		&-unit{
 			&-content{
 			    padding: 44px 18px 10px 18px;
@@ -607,5 +772,120 @@ input[type=submit], input[type=button] {
 			    }
 			}
 		}
+	}
+}
+*/
+@media(max-width: 340px){
+	.progress{
+		top:21px;
+	}
+	.test{
+		&-wrap{
+			
+			padding:0 5px;
+			&_simple{
+				.test{
+					&-unit{
+						&_question{
+							&-title{
+								font-size: 18px;
+								line-height: 24px;
+								&_big{
+									font-size: 24px;
+									line-height: 30px;
+								}
+							}
+							&-content{
+								padding-bottom: 15px;
+							}
+						}
+					}
+				}
+			}
+			
+		}
+		&-unit{
+			&-content{
+				padding: 52px 10px 21px 10px;
+				height:257px;
+				&-image{
+					top: -66px;
+					max-width: 210px;
+				}
+				&-title{
+					 font-size: 22px;
+   					 line-height: 25px;
+				}
+			}
+			&-center{
+				    margin-top: 104px;
+			}
+			&_question{
+				padding-top: 15px;
+				padding-bottom: 5px;
+				&-top{
+					height: calc(100% - 175px);
+				}
+				&-title{
+				    font-size: 16px;
+    				line-height: 22px;
+    				margin-bottom: 15px;
+				}
+				&-content{
+					    padding: 22px 5px 5px 5px
+				}
+				&-answers{
+					&-unit{
+						padding:0 15px;
+						height:40px;
+						line-height: 40px;
+						font-size: 16px;
+					}
+				}
+				&-results{
+					&-unit{
+						&-button{
+							padding:0 15px;
+							font-size: 16px;
+							height:85px;
+							line-height:85px;
+						}
+						&-info{
+							padding: 10px 15px;
+							height:85px;
+
+							&-header{
+								margin-bottom: 3px;
+								&-title{
+									font-size: 16px;
+								}
+							}
+							&-text{
+								font-size: 12px;
+								line-height: 14px;
+							}
+						}
+					}
+				}
+			}
+			&_final{
+				padding-top: 15px;
+				padding-bottom: 5px;
+				&-image{
+					justify-content:center;
+				}
+			}
+			&-header{
+				display: none;
+
+			}
+			&-footer{
+				display: none;
+			}
+		}
+		
+	}
+	.progress{
+	    width: calc(100% - 20px);
 	}
 }

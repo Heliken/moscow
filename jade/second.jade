@@ -1,0 +1,137 @@
+include ./includes/components.jade
+
+doctype html
+html
+	+head ('Second test')
+
+	body
+		
+		.header верхнее меню
+		.test
+			.filler.filler_double
+				.filler-unit
+				.filler-unit
+			.filler.filler_triple
+				.filler-unit
+				.filler-unit
+				.filler-unit
+			.filler
+				.filler-unit
+			.rotate
+				.rotate-text Переверните устройство!
+			#test2.test-wrap.test-wrap_simple
+				.header верхнее меню
+				.test-unit
+					.test-unit-header
+						.test-unit-header-segment.test-unit-header-segment_blue
+						.test-unit-header-segment.test-unit-header-segment_red
+					.test-unit-center
+						.test-unit-content
+							img(src="images/test-main-image.png" alt="").test-unit-content-image
+							.test-unit-content-pretitle Тест
+							.test-unit-content-title Вы уверены, что знаете Москву? Докажите это!
+							.test-unit-content-button.button.button_red Пройти тест!
+						.test-unit-socials
+							a(href="#/").test-unit-socials-unit.test-unit-socials-unit_facebook
+								.test-unit-socials-unit-icon
+								.test-unit-socials-unit-counter 14558
+							a(href="#/").test-unit-socials-unit.test-unit-socials-unit_vk
+								.test-unit-socials-unit-icon
+								.test-unit-socials-unit-counter 5327
+							a(href="#/").test-unit-socials-unit.test-unit-socials-unit_insta
+								.test-unit-socials-unit-icon
+								.test-unit-socials-unit-counter 6457
+					.test-unit-footer
+				.test-unit.test-unit_question
+					.test-unit_question-content
+						.test-unit_question-top
+							.test-unit_question-pretitle Вопрос 1 из 4
+							.test-unit_question-title Какая это улица до реализации «adblock компании»?
+							.test-unit_question-image
+								img(src="images/question02-01.png" alt="")
+						.test-unit_question-button.test-unit_question-button_show Показать ответ
+				.test-unit.test-unit_question
+					.test-unit_question-content
+						.test-unit_question-top
+							.test-unit_question-pretitle.test-unit_question-pretitle_preBig Ответ
+							.test-unit_question-title.test-unit_question-title_big Маросейка
+							.test-unit_question-image
+								img(src="images/question02-02.png" alt="")
+						.test-unit_question-button.test-unit_question-button_next Дальше
+				.test-unit.test-unit_question
+					.test-unit_question-content
+						.test-unit_question-top
+							.test-unit_question-pretitle Вопрос 2 из 4
+							.test-unit_question-title Что стало главной достопримечательностью в этом долгострое?
+							.test-unit_question-image
+								img(src="images/question02-03.png" alt="")
+						.test-unit_question-button.test-unit_question-button_show Показать ответ
+				.test-unit.test-unit_question
+					.test-unit_question-content
+						.test-unit_question-top
+							.test-unit_question-pretitle.test-unit_question-pretitle_preBig Ответ
+							.test-unit_question-title.test-unit_question-title_big Стена Белого города
+							.test-unit_question-image
+								img(src="images/question02-04.png" alt="")
+						.test-unit_question-button.test-unit_question-button_next Дальше
+				.test-unit.test-unit_question
+					.test-unit_question-content
+						.test-unit_question-top
+							.test-unit_question-pretitle Вопрос 3 из 4
+							.test-unit_question-title Для кого построили отдельный павильон после реконструкции Крымской набережной?
+							.test-unit_question-image
+								img(src="images/question02-05.png" alt="")
+						.test-unit_question-button.test-unit_question-button_show Показать ответ
+				.test-unit.test-unit_question
+					.test-unit_question-content
+						.test-unit_question-top
+							.test-unit_question-pretitle.test-unit_question-pretitle_preBig Ответ
+							.test-unit_question-title.test-unit_question-title_big Для <br>художников
+							.test-unit_question-image
+								img(src="images/question02-06.png" alt="")
+						.test-unit_question-button.test-unit_question-button_next Дальше
+				.test-unit.test-unit_question
+					.test-unit_question-content
+						.test-unit_question-top
+							.test-unit_question-pretitle Вопрос 4 из 4
+							.test-unit_question-title Как называется этот торговый объект на Лубянке до реконструкции?
+							.test-unit_question-image
+								img(src="images/question02-07.png" alt="")
+						.test-unit_question-button.test-unit_question-button_show Показать ответ
+				.test-unit.test-unit_question
+					.test-unit_question-content
+						.test-unit_question-top
+							.test-unit_question-pretitle.test-unit_question-pretitle_preBig Ответ
+							.test-unit_question-title.test-unit_question-title_big Центральный детский мир
+							.test-unit_question-image
+								img(src="images/question02-08.png" alt="")
+						.test-unit_question-button.test-unit_question-button_next Дальше
+				.test-unit.test-unit_final
+					.test-unit_final-content
+						.test-unit_final-top
+							.test-unit-content-pretitle Конец
+							.test-unit_final-image
+								img(src="images/end-image_small.png" alt="")
+							.test-unit-content-title Вы — настоящий краевед! Ваши друзья об этом знают?
+							
+						.test-unit_final-button.button.button_green Пройти тест еще раз
+					.test-unit-socials
+						a(href="#/").test-unit-socials-unit.test-unit-socials-unit_facebook
+							.test-unit-socials-unit-icon
+							.test-unit-socials-unit-counter 14558
+						a(href="#/").test-unit-socials-unit.test-unit-socials-unit_vk
+							.test-unit-socials-unit-icon
+							.test-unit-socials-unit-counter 5327
+						a(href="#/").test-unit-socials-unit.test-unit-socials-unit_insta
+							.test-unit-socials-unit-icon
+							.test-unit-socials-unit-counter 6457
+			.filler.filler_triple
+				.filler-unit
+				.filler-unit
+				.filler-unit
+			.filler.filler_double
+				.filler-unit
+				.filler-unit
+			
+			.filler
+				.filler-unit
