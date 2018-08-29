@@ -58,19 +58,61 @@ $(document).ready(function(){
         touchMove:false,
         adaptiveHeight:true,
 	})
+	
+	$(".test-unit_final-button_next").click(function(){
+		$(".test-wrap").slick("slickNext");
+		$(".progress-unit").removeClass("progress-unit_active progress-unit_correct progress-unit_wrong");
+		var progressUnit=$(".progress-unit").first();
+		$(".progress").html("");
+		var i;
+		for( i=0;i<8;i++){
+			var progressUnitClone=progressUnit.clone();
+			$('.progress').append(progressUnitClone);
+		}
+		$(".progress-unit").eq(0).addClass("progress-unit_current");
+		
+	})
 	$(".test-unit_question-results-unit-button").click(function(){
 		$(".test-wrap").slick("slickNext");
 		var current=$(".progress-unit_current");
 		current.removeClass("progress-unit_current");
 		current.next().addClass("progress-unit_current");
-		
+		if($(this).parents(".test-unit").hasClass("test-unit_last")){
+			var rightAnswersAmount=0;
+			rightAnswersAmount=$(".progress-unit_correct").length;
+			var comboNumber=0;
+			if(rightAnswersAmount>=8){
+				comboNumber=2;
+			} else if(rightAnswersAmount>=5){
+				comboNumber=1;
+			} else{
+				comboNumber=0;
+			}
+			if($(this).parents(".test-unit").hasClass("test-unit_last_first")){
+				
+				var resultsCombinations=[["Привет из будущего! Мы вас удивим: кепки уже не в моде,  но в центре Москвы появилась ледяная пещера!","Хотите еще попытку с дургими вопросами?",'Держите меня семеро!'],['Вы ценитель сегодняшней Москвы, но Москва еще может вас приятно удивить. Гуляйте больше!','Как на счет пройти еще один тест?','Пройду, пожалуй! Ведите!'],['С вами приятно иметь дело! Увидимся на открытии канатной дороги на Воробьевых горах?','У нас есть еще один тест.Хотите и его в пух и прах?','Пройду, пожалуй! Ведите!']];
+				
+				$(".test-unit_final_first").find(".result-number").html(rightAnswersAmount);
+				$(".test-unit_final_first").find(".test-unit_final-top .test-unit-content-title").html(resultsCombinations[comboNumber][0]);
+				$(".test-unit_final_first").find(".test-unit_final-bottom .test-unit-content-title").html(resultsCombinations[comboNumber][1]);
+				$(".test-unit_final_first").find(".test-unit_final-bottom .test-unit_final-button_next").html(resultsCombinations[comboNumber][2]);
+			} else if($(this).parents(".test-unit").hasClass("test-unit_last_second")){
+				
+				var resultsCombinations=['Москва, 2018 год, тротуары широкие, липы на Садовом посажены, медовые ярмарки в архиве, прием!','Москва меняется в лучшую сторону чуть быстрее, чем вы замечаете. Но вам понравится, обещаем!','Мы впечатлены! Вы знаете про все новые фишечки Москвы, но мы вас еще удивим. Просто оставайтесь первыми'];
+				
+				$(".test-unit_final_second").find(".result-number").html(rightAnswersAmount);
+				$(".test-unit_final_second").find(".test-unit_final-top .test-unit-content-title").html(resultsCombinations[comboNumber]);
+			}
+		}
 	})
+	/*
 	$(".test-unit_final-button").click(function(){
 		$(".test-wrap").slick("slickGoTo",1,false);
 		$(".test-unit_question-info").slick("slickGoTo",0,false);
 		$(".progress-unit").removeClass("progress-unit_active progress-unit_correct progress-unit_wrong");
 		$(".progress-unit").eq("0").addClass("progress-unit_current");
 	})
+	*/
 	$(".test-unit_question-answers-unit").click(function(){
 		var text=$(this).html();
 		$(this).parents(".test-unit_question").addClass("test-unit_question_answered");
@@ -113,8 +155,10 @@ function imageSize(){
 		var pretitleHeight=$(this).find(".test-unit-content-pretitle").outerHeight(true);
 		var titleHeight=$(this).find(".test-unit-content-title").outerHeight(true);
 		var sum=pretitleHeight+titleHeight;
+		var finalBottom=$(this).parents(".test-unit_final").find(".test-unit_final-bottom").outerHeight(true);
+		$(this).css({"height":"calc(100% - "+finalBottom+"px)"});
 		var img=$(this).find(".test-unit_final-image");
-		img.css({"height":"calc(100% - "+sum+"px)"});
+		//img.css({"height":"calc(100% - "+sum+"px)"});
 	});
 }
 $(window).on("resize load",function(){
