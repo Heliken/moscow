@@ -2,10 +2,35 @@ include ./includes/components.jade
 
 doctype html
 html
-	+head ('Index')
+	+head ('Тест на знание Москвы')
 
 	body
-		
+		script(type="text/javascript").
+			(function (d, w, c) {
+				(w[c] = w[c] || []).push(function() {
+					try {
+						w.yaCounter47587534 = new Ya.Metrika({
+							id:47587534,
+							clickmap:true,
+							trackLinks:true,
+							accurateTrackBounce:true,
+							webvisor:true,
+							trackHash:true
+						});
+					} catch(e) { }
+				});
+
+				var n = d.getElementsByTagName("script")[0],
+					s = d.createElement("script"),
+					f = function () { n.parentNode.insertBefore(s, n); };
+				s.type = "text/javascript";
+				s.async = true;
+				s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+				if (w.opera == "[object Opera]") {
+					d.addEventListener("DOMContentLoaded", f, false);
+				} else { f(); }
+			})(document, window, "yandex_metrika_callbacks");
 		.header верхнее меню
 		.test.test_alt.test_alt_2
 			.rotate
@@ -36,8 +61,8 @@ html
 							img(src="images/test-main-image_02.png" alt="").test-unit-content-image
 							.test-unit-content-pretitle Тест
 							.test-unit-content-title Вы уверены, что знаете Москву? Докажите это!
-							.test-unit-content-button.button.button_red Пройти тест!
-						.test-unit-socials
+							.test-unit-content-button.button.button_red(onclick="yaCounter47587534.reachGoal('test_start'); return true;") Пройти тест!
+						//.test-unit-socials
 							a(href="#/").test-unit-socials-unit.test-unit-socials-unit_facebook
 								.test-unit-socials-unit-icon
 								.test-unit-socials-unit-counter 14558
@@ -149,10 +174,10 @@ html
 								img(src="images/question02-08@2x.png" alt="")
 						.test-unit_question-info
 							.test-unit_question-answers
-								.test-unit_question-answers-unit.test-unit_question-answers-unit_correct Центральный детский мир
-								.test-unit_question-answers-unit Метро 2033
-								.test-unit_question-answers-unit Книжный магазин
-								.test-unit_question-answers-unit Торговый центр «Наутилус»
+								.test-unit_question-answers-unit.test-unit_question-answers-unit_correct(onclick="yaCounter47587534.reachGoal('test1_middle'); return true;") Центральный детский мир
+								.test-unit_question-answers-unit(onclick="yaCounter47587534.reachGoal('test1_middle'); return true;") Метро 2033
+								.test-unit_question-answers-unit(onclick="yaCounter47587534.reachGoal('test1_middle'); return true;") Книжный магазин
+								.test-unit_question-answers-unit(onclick="yaCounter47587534.reachGoal('test1_middle'); return true;") Торговый центр «Наутилус»
 							.test-unit_question-results
 								.test-unit_question-results-unit.test-unit_question-results-unit_wrong
 									.test-unit_question-results-unit-button Ясно. Едем дальше!
@@ -242,7 +267,7 @@ html
 								.test-unit_question-answers-unit.test-unit_question-answers-unit_correct Московский Планетарий
 								.test-unit_question-answers-unit Метро «Ботанический сад» 
 								.test-unit_question-answers-unit Все-таки стадион «Лужники»							
-								.test-unit_question-answers-unit Теперь уж точно Космос на ВДНХ!
+								.test-unit_question-answers-unit Павильон Космос на ВДНХ!
 							.test-unit_question-results
 								.test-unit_question-results-unit.test-unit_question-results-unit_wrong
 									.test-unit_question-results-unit-button Ясно. Едем дальше!
@@ -258,71 +283,10 @@ html
 											.test-unit_question-results-unit-info-header-title Центральный детский мир
 											.test-unit_question-results-unit-info-header-icon.test-unit_question-results-unit-info-header-icon_green
 										.test-unit_question-results-unit-info-text.test-unit_question-results-unit-info-text_green Верно! Это наше астрономическое сердце Москвы — Планетарий
-
 				.test-unit.test-unit_question
 					.test-unit_question-content
 						.test-unit_question-top
 							.test-unit_question-pretitle Вопрос 8 из 10
-							.test-unit_question-title Что это за улица до обустройства?
-							.test-unit_question-image
-								img(src="images/question02-15@2x.png" alt="")
-							.test-unit_question-image.test-unit_question-image_2
-								img(src="images/question02-16@2x.png" alt="")
-						.test-unit_question-info
-							.test-unit_question-answers
-								.test-unit_question-answers-unit Проспект Мира
-								.test-unit_question-answers-unit Рязанский проспект
-								.test-unit_question-answers-unit.test-unit_question-answers-unit_correct Новый Арбат
-								.test-unit_question-answers-unit Шоссе Энтузиастов
-							.test-unit_question-results
-								.test-unit_question-results-unit.test-unit_question-results-unit_wrong
-									.test-unit_question-results-unit-button Ясно. Едем дальше!
-									.test-unit_question-results-unit-info
-										.test-unit_question-results-unit-info-header
-											.test-unit_question-results-unit-info-header-title Неправильный ответ
-											.test-unit_question-results-unit-info-header-icon.test-unit_question-results-unit-info-header-icon_red
-										.test-unit_question-results-unit-info-text.test-unit_question-results-unit-info-text_red Нет, это Новый Арбат, теперь уже действительно новый
-								.test-unit_question-results-unit.test-unit_question-results-unit_correct
-									.test-unit_question-results-unit-button Следующий вопрос!
-									.test-unit_question-results-unit-info
-										.test-unit_question-results-unit-info-header
-											.test-unit_question-results-unit-info-header-title Центральный детский мир
-											.test-unit_question-results-unit-info-header-icon.test-unit_question-results-unit-info-header-icon_green
-										.test-unit_question-results-unit-info-text.test-unit_question-results-unit-info-text_green Правильно, это Новый Арбат и новый маршрут для прогулок
-				.test-unit.test-unit_question
-					.test-unit_question-content
-						.test-unit_question-top
-							.test-unit_question-pretitle Вопрос 9 из 10
-							.test-unit_question-title Как узнать когда приедет следующий автобус?
-							.test-unit_question-image
-								img(src="images/question02-17@2x.png" alt="")
-							.test-unit_question-image.test-unit_question-image_2
-								img(src="images/question02-18@2x.png" alt="")
-						.test-unit_question-info
-							.test-unit_question-answers
-								.test-unit_question-answers-unit Почувствовать
-								.test-unit_question-answers-unit.test-unit_question-answers-unit_correct Посмотреть на табло
-								.test-unit_question-answers-unit Прикинуть в уме
-								.test-unit_question-answers-unit На все воля Божья!
-							.test-unit_question-results
-								.test-unit_question-results-unit.test-unit_question-results-unit_wrong
-									.test-unit_question-results-unit-button Ясно. Едем дальше!
-									.test-unit_question-results-unit-info
-										.test-unit_question-results-unit-info-header
-											.test-unit_question-results-unit-info-header-title Неправильный ответ
-											.test-unit_question-results-unit-info-header-icon.test-unit_question-results-unit-info-header-icon_red
-										.test-unit_question-results-unit-info-text.test-unit_question-results-unit-info-text_red Очень смешно, но нет. Просто гляньте на табло.
-								.test-unit_question-results-unit.test-unit_question-results-unit_correct
-									.test-unit_question-results-unit-button Следующий вопрос!
-									.test-unit_question-results-unit-info
-										.test-unit_question-results-unit-info-header
-											.test-unit_question-results-unit-info-header-title Центральный детский мир
-											.test-unit_question-results-unit-info-header-icon.test-unit_question-results-unit-info-header-icon_green
-										.test-unit_question-results-unit-info-text.test-unit_question-results-unit-info-text_green Да, а скоро только такие остановки и будут!
-				.test-unit.test-unit_question.test-unit_last.test-unit_last_first
-					.test-unit_question-content
-						.test-unit_question-top
-							.test-unit_question-pretitle Вопрос 10 из 10
 							.test-unit_question-title Что это за здание до реставрации?
 							.test-unit_question-image
 								img(src="images/question02-13@2x.png" alt="")
@@ -350,6 +314,67 @@ html
 											.test-unit_question-results-unit-info-header-icon.test-unit_question-results-unit-info-header-icon_green
 										.test-unit_question-results-unit-info-text.test-unit_question-results-unit-info-text_green Да, это павильон Космос, сходите!
 
+				.test-unit.test-unit_question
+					.test-unit_question-content
+						.test-unit_question-top
+							.test-unit_question-pretitle Вопрос 9 из 10
+							.test-unit_question-title Что это за улица до обустройства?
+							.test-unit_question-image
+								img(src="images/question02-15@2x.png" alt="")
+							.test-unit_question-image.test-unit_question-image_2
+								img(src="images/question02-16@2x.png" alt="")
+						.test-unit_question-info
+							.test-unit_question-answers
+								.test-unit_question-answers-unit Проспект Мира
+								.test-unit_question-answers-unit Рязанский проспект
+								.test-unit_question-answers-unit.test-unit_question-answers-unit_correct Новый Арбат
+								.test-unit_question-answers-unit Шоссе Энтузиастов
+							.test-unit_question-results
+								.test-unit_question-results-unit.test-unit_question-results-unit_wrong
+									.test-unit_question-results-unit-button Ясно. Едем дальше!
+									.test-unit_question-results-unit-info
+										.test-unit_question-results-unit-info-header
+											.test-unit_question-results-unit-info-header-title Неправильный ответ
+											.test-unit_question-results-unit-info-header-icon.test-unit_question-results-unit-info-header-icon_red
+										.test-unit_question-results-unit-info-text.test-unit_question-results-unit-info-text_red Нет, это Новый Арбат, теперь уже действительно новый
+								.test-unit_question-results-unit.test-unit_question-results-unit_correct
+									.test-unit_question-results-unit-button Следующий вопрос!
+									.test-unit_question-results-unit-info
+										.test-unit_question-results-unit-info-header
+											.test-unit_question-results-unit-info-header-title Центральный детский мир
+											.test-unit_question-results-unit-info-header-icon.test-unit_question-results-unit-info-header-icon_green
+										.test-unit_question-results-unit-info-text.test-unit_question-results-unit-info-text_green Правильно, это Новый Арбат и новый маршрут для прогулок
+				.test-unit.test-unit_question.test-unit_last.test-unit_last_first
+					.test-unit_question-content
+						.test-unit_question-top
+							.test-unit_question-pretitle Вопрос 10 из 10
+							.test-unit_question-title Как узнать когда приедет следующий автобус?
+							.test-unit_question-image
+								img(src="images/question02-17@2x.png" alt="")
+							.test-unit_question-image.test-unit_question-image_2
+								img(src="images/question02-18@2x.png" alt="")
+						.test-unit_question-info
+							.test-unit_question-answers
+								.test-unit_question-answers-unit(onclick="yaCounter47587534.reachGoal('test1_finish'); return true;") Почувствовать
+								.test-unit_question-answers-unit.test-unit_question-answers-unit_correct(onclick="yaCounter47587534.reachGoal('test1_finish'); return true;") Посмотреть на табло
+								.test-unit_question-answers-unit(onclick="yaCounter47587534.reachGoal('test1_finish'); return true;") Прикинуть в уме
+								.test-unit_question-answers-unit(onclick="yaCounter47587534.reachGoal('test1_finish'); return true;") На все воля Божья!
+							.test-unit_question-results
+								.test-unit_question-results-unit.test-unit_question-results-unit_wrong
+									.test-unit_question-results-unit-button Ясно. Едем дальше!
+									.test-unit_question-results-unit-info
+										.test-unit_question-results-unit-info-header
+											.test-unit_question-results-unit-info-header-title Неправильный ответ
+											.test-unit_question-results-unit-info-header-icon.test-unit_question-results-unit-info-header-icon_red
+										.test-unit_question-results-unit-info-text.test-unit_question-results-unit-info-text_red Очень смешно, но нет. Просто гляньте на табло.
+								.test-unit_question-results-unit.test-unit_question-results-unit_correct
+									.test-unit_question-results-unit-button Следующий вопрос!
+									.test-unit_question-results-unit-info
+										.test-unit_question-results-unit-info-header
+											.test-unit_question-results-unit-info-header-title Центральный детский мир
+											.test-unit_question-results-unit-info-header-icon.test-unit_question-results-unit-info-header-icon_green
+										.test-unit_question-results-unit-info-text.test-unit_question-results-unit-info-text_green Да, а скоро только такие остановки и будут!
+
 				.test-unit.test-unit_final.test-unit_final_first
 					.test-unit_final-content
 						.test-unit_final-top
@@ -359,11 +384,11 @@ html
 							.test-unit-content-title Привет из будущего! Мы вас удивим: кепки уже не в моде,  но в центре Москвы появилась ледяная пещера!
 						.test-unit_final-bottom
 							.test-unit-content-title Хотите еще попытку с другими вопросами? 
-							.test-unit_final-button.test-unit_final-button_next.button.button_red Пройти еще тест!
+							.test-unit_final-button.test-unit_final-button_next.button.button_red(onclick="yaCounter47587534.reachGoal('test2_start'); return true;") Пройти еще тест!
 							.test-unit-content-title Приходите на день города в своем районе!
 							.test-unit_final-button-wrap
 								.test-unit_final-button.test-unit_final-button_share.button.button_green Рассказать друзьям
-								a(href="#/").test-unit_final-button.test-unit_final-button_share.button.button_green День города москвы
+								a(href="https://moscowseasons.com/ru/festival/moscow871?utm_source=mozgva&utm_medium=test&utm_campaign=wifi" target="_blank").test-unit_final-button.test-unit_final-button_share.button.button_green(onclick="yaCounter47587534.reachGoal('external_link1'); return true;") День города Москвы
 				.test-unit.test-unit_question.test-unit_question_singleImage
 					.test-unit_question-content
 						.test-unit_question-top
@@ -429,10 +454,10 @@ html
 								img(src="images/question-03@2x.png" alt="")
 						.test-unit_question-info
 							.test-unit_question-answers
-								.test-unit_question-answers-unit Спиннер
-								.test-unit_question-answers-unit Чехол для телефона
-								.test-unit_question-answers-unit.test-unit_question-answers-unit_correct Брелок
-								.test-unit_question-answers-unit Наушник
+								.test-unit_question-answers-unit(onclick="yaCounter47587534.reachGoal('test2_middle'); return true;") Спиннер
+								.test-unit_question-answers-unit(onclick="yaCounter47587534.reachGoal('test2_middle'); return true;") Чехол для телефона
+								.test-unit_question-answers-unit.test-unit_question-answers-unit_correct(onclick="yaCounter47587534.reachGoal('test2_middle'); return true;") Брелок
+								.test-unit_question-answers-unit(onclick="yaCounter47587534.reachGoal('test2_middle'); return true;") Наушник
 								
 							.test-unit_question-results
 								.test-unit_question-results-unit.test-unit_question-results-unit_wrong
@@ -570,10 +595,10 @@ html
 								img(src="images/question-08@2x.png" alt="")
 						.test-unit_question-info
 							.test-unit_question-answers
-								.test-unit_question-answers-unit Иосиф Пригожин лично
-								.test-unit_question-answers-unit Сергей Собянин<br> с помощниками
-								.test-unit_question-answers-unit.test-unit_question-answers-unit_correct Сами выпускники на ag.mos.ru
-								.test-unit_question-answers-unit Подписчики <br>Ольги Бузовой
+								.test-unit_question-answers-unit(onclick="yaCounter47587534.reachGoal('test2_finish'); return true;") Иосиф Пригожин лично
+								.test-unit_question-answers-unit(onclick="yaCounter47587534.reachGoal('test2_finish'); return true;") Сергей Собянин<br> с помощниками
+								.test-unit_question-answers-unit.test-unit_question-answers-unit_correct(onclick="yaCounter47587534.reachGoal('test2_finish'); return true;") Сами выпускники на ag.mos.ru
+								.test-unit_question-answers-unit(onclick="yaCounter47587534.reachGoal('test2_finish'); return true;") Подписчики <br>Ольги Бузовой
 							.test-unit_question-results
 								.test-unit_question-results-unit.test-unit_question-results-unit_wrong
 									.test-unit_question-results-unit-button Ясно. Едем дальше!
@@ -598,7 +623,7 @@ html
 							.test-unit-content-title Привет из будущего! Мы вас удивим: кепки уже не в моде,  но в центре Москвы появилась ледяная пещера!
 						.test-unit_final-bottom
 							.test-unit-content-title Приходите на день города в своем районе!
-							.test-unit_final-button.button.button_red  День города Москвы
+							a(href="https://moscowseasons.com/ru/festival/moscow871?utm_source=mozgva&utm_medium=test&utm_campaign=wifi" target="_blank").test-unit_final-button.button.button_red(onclick="yaCounter47587534.reachGoal('external_link1'); return true;") День города Москвы
 							a(href="#/").test-unit_final-button.test-unit_final-button_share.button.button_green Рассказать друзьям
 
 			.filler.filler_double
@@ -616,5 +641,5 @@ html
 				.popup-share-wrap
 					<script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
 					<script src="//yastatic.net/share2/share.js"></script>
-					<div class="ya-share2"data-title="Тест на знание москвы" data-image="https://raw.githubusercontent.com/Heliken/moscow/master/images/share.png" data-limit="4" data-bare data-services="whatsapp,twitter,skype,facebook,vkontakte"></div>
+					<div class="ya-share2"data-title="Тест на знание Москвы" data-image="https://raw.githubusercontent.com/Heliken/moscow/master/images/share.png" data-limit="4" data-bare data-services="whatsapp,twitter,skype,facebook,vkontakte"></div>
 				.popup-share-close Отмена		
