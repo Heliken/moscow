@@ -158,10 +158,10 @@ function imageSize(){
 		img.css({"height":"calc(100% - "+sum+"px)"});
 	})
 	$(".test-unit_final-top").each(function(){
-		var pretitleHeight=$(this).find(".test-unit-content-pretitle").outerHeight(true);
-		var titleHeight=$(this).find(".test-unit-content-title").outerHeight(true);
+		var pretitleHeight=$(this).find(".test-unit-content-pretitle").height(true);
+		var titleHeight=$(this).find(".test-unit-content-title").height(true);
 		var sum=pretitleHeight+titleHeight;
-		var finalBottom=$(this).parents(".test-unit_final").find(".test-unit_final-bottom").outerHeight(true)+12;
+		var finalBottom=$(this).parents(".test-unit_final").find(".test-unit_final-bottom").height()+12;
 		$(this).css({"height":"calc(100% - "+finalBottom+"px)"});
 		var img=$(this).find(".test-unit_final-image");
 		//img.css({"height":"calc(100% - "+sum+"px)"});
