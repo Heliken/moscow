@@ -166,17 +166,42 @@ function imageSize(){
 		var img=$(this).find(".test-unit_final-image");
 		//img.css({"height":"calc(100% - "+sum+"px)"});
 	});
+	$(".test-unit_final-button_share").click(function(){
+		$(".popup-share").addClass("popup_active");
+	})
+	$('.popup').click(function(){
+		$(this).removeClass("popup_active");
+
+	})
+	$(".popup-share-close").click(function(){
+		$(this).parents(".popup").removeClass("popup_active");
+
+	})
 }
 $(window).on("resize load",function(){
 	imageSize();
+	var shareVk=$(".ya-share2__item_service_vkontakte");
+	shareVk.remove();
+	$(".ya-share2__item_service_facebook").after(shareVk);
 })
 
-/* Optional triggers
+$(window).on("load",function(){
+	var shareVk=$(".ya-share2__item_service_vkontakte");
+	shareVk.remove();
+	$(".ya-share2__item_service_facebook").after(shareVk);
+	$(".ya-share2__item_more").click(function(){
+		
+		var $temp = $("<input>");
+	 	$("body").append($temp);
 
-$(window).load(function() {
+	 	$temp.val($(this).find("input").val());
+		document.execCommand("copy");
+		$temp.remove();
+	})
 	
-});
+})
 
+/*
 $(window).resize(function() { 
 	
 });
