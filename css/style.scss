@@ -676,31 +676,57 @@ input[type=submit], input[type=button] {
 				display: flex;
 				flex-direction:column;
 				border-radius: 10px;
-				padding:38px 16px 22px 16px;
+				padding:30px 16px 9px 16px;
 				background-size: cover;
 				
 				background-image: url(../images/end-bg.svg);
 				margin-bottom: 0px;
 				.test-unit-content-pretitle{
-					margin-bottom: 15px;
+					margin-bottom: 12px;
 					color:#fff;
 				}
 				.test-unit-content-title{
-					font-size: 20px;
-					line-height: 24px;
+					font-size: 18px;
+					line-height: 22px;
 					text-align: center;
 				}
 			}
 			&-bottom{
 				margin-top:auto;
 				.test-unit-content-title{
-					margin-bottom: 20px;
+					font-weight: 600;
+					
+					font-size: 16px;
+					line-height: 20px;
+					max-width: 230px;
+					margin:0 auto;
+					margin-bottom:12px;
 				}
+
 			}
 			&-button{
 				margin-bottom: 20px;
 				&:last-child{
 					margin-bottom: 0;
+				}
+				&-wrap{
+					margin-left: -12px;
+					display: flex;
+					width:calc(100% + 24px);
+					justify-content:space-between;
+					.button{
+						margin-bottom: 0;
+						font-weight: 600;
+						padding:0 15px;
+						font-size: 14px;
+						line-height: 17px;
+						text-align: center;
+						display: flex;
+						align-items:center;
+						color:$purple;
+						box-shadow:none;
+						width:calc(50% - 1px);
+					}
 				}
 			}
 			&-image{
@@ -712,15 +738,17 @@ input[type=submit], input[type=button] {
 				img{
 					max-height: 100%;
 					max-width: 100%;
-					width:260px;
+					width:172px;
 				}
 			}
 			&_second{
-				.test-unit_final-bottom{
-					.test-unit-content-title{
-						margin-bottom: 30px;
+				.test-unit_final-button{
+					margin-bottom: 14px;
+					&:last-child{
+						margin-bottom: 0;
 					}
 				}
+				
 			}
 
 		}
@@ -924,6 +952,7 @@ input[type=submit], input[type=button] {
 	}
 }
 .button{
+	display: inline-block;
 	width:100%;
 	text-align: center;
 	height:56px;
@@ -1076,20 +1105,10 @@ input[type=submit], input[type=button] {
 					justify-content:center;
 				}
 				&_second{
-					.test{
-						&-unit{
-							&_final{
-								&-image{
-									img{
-										width:260px;
-									}
-								}
-							}
-						}
-					}
+					
 				}
 				&-content{
-					padding-bottom: 17px;
+					padding-bottom: 9px;
 					.test-unit-content-title{
 						font-size: 17px;
 						line-height: 18px;
@@ -1097,7 +1116,10 @@ input[type=submit], input[type=button] {
 				}
 				&-bottom{
 					.test-unit-content-title{
-						margin-bottom: 10px;
+						font-size: 14px;
+						line-height: 16px;
+						margin-bottom: 6px;
+
 					}
 				}
 				&-button{

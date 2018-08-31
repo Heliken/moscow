@@ -90,12 +90,10 @@ $(document).ready(function(){
 			}
 			if($(this).parents(".test-unit").hasClass("test-unit_last_first")){
 				
-				var resultsCombinations=[["Привет из будущего! Мы вас удивим: кепки уже не в моде,  но в центре Москвы появилась ледяная пещера!","Хотите еще попытку с дургими вопросами?",'Держите меня семеро!'],['Вы ценитель сегодняшней Москвы, но Москва еще может вас приятно удивить. Гуляйте больше!','Как на счет пройти еще один тест?','Пройду, пожалуй! Ведите!'],['С вами приятно иметь дело! Увидимся на открытии канатной дороги на Воробьевых горах?','У нас есть еще один тест.Хотите и его в пух и прах?','Пройду, пожалуй! Ведите!']];
+				var resultsCombinations=["Привет из будущего! Мы вас удивим: кепки уже не в моде,  но в центре Москвы появилась ледяная пещера!",'Вы ценитель сегодняшней Москвы, но Москва еще может вас приятно удивить. Гуляйте больше!','С вами приятно иметь дело! Увидимся на открытии канатной дороги на Воробьевых горах?'];
 				
 				$(".test-unit_final_first").find(".result-number").html(rightAnswersAmount);
-				$(".test-unit_final_first").find(".test-unit_final-top .test-unit-content-title").html(resultsCombinations[comboNumber][0]);
-				$(".test-unit_final_first").find(".test-unit_final-bottom .test-unit-content-title").html(resultsCombinations[comboNumber][1]);
-				$(".test-unit_final_first").find(".test-unit_final-bottom .test-unit_final-button_next").html(resultsCombinations[comboNumber][2]);
+				$(".test-unit_final_first").find(".test-unit_final-top .test-unit-content-title").html(resultsCombinations[comboNumber]);
 			} else if($(this).parents(".test-unit").hasClass("test-unit_last_second")){
 				
 				var resultsCombinations=['Москва, 2018 год, тротуары широкие, липы на Садовом посажены, медовые ярмарки в архиве, прием!','Москва меняется в лучшую сторону чуть быстрее, чем вы замечаете. Но вам понравится, обещаем!','Мы впечатлены! Вы знаете про все новые фишечки Москвы, но мы вас еще удивим. Просто оставайтесь первыми'];
@@ -141,6 +139,14 @@ $(document).ready(function(){
 		$(".test-wrap_simple").slick("slickNext");
 		$(this).parents(".test-unit_question").find(".test-unit_question-image").addClass("test-unit_question-image_move");
 	})
+	/*
+	$(".test-unit-socials-unit_facebook").click(function(){
+		u=location.href;
+		t=document.title;
+		window.open('http://www.facebook.com/sharer.php?u='+encodeURIComponent(u)+'&t='+encodeURIComponent(t),'sharer','toolbar=0,status=0,width=626,height=436');
+		return false;
+	})
+	*/
 });
 function imageSize(){
 	$(".test-unit_question-top").each(function(){
@@ -155,7 +161,7 @@ function imageSize(){
 		var pretitleHeight=$(this).find(".test-unit-content-pretitle").outerHeight(true);
 		var titleHeight=$(this).find(".test-unit-content-title").outerHeight(true);
 		var sum=pretitleHeight+titleHeight;
-		var finalBottom=$(this).parents(".test-unit_final").find(".test-unit_final-bottom").outerHeight(true);
+		var finalBottom=$(this).parents(".test-unit_final").find(".test-unit_final-bottom").outerHeight(true)+12;
 		$(this).css({"height":"calc(100% - "+finalBottom+"px)"});
 		var img=$(this).find(".test-unit_final-image");
 		//img.css({"height":"calc(100% - "+sum+"px)"});
