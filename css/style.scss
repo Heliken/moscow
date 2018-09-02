@@ -1216,6 +1216,17 @@ input[type=submit], input[type=button] {
 						content:"Вконтакте";
 					}
 				}
+				&_telegram{
+					&:before{
+						
+						background-image:url(../images/social-04.svg);
+					}
+					&:after{
+
+						
+						content:"Telegram";
+					}
+				}
 				
 			}
 		}

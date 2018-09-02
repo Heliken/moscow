@@ -1270,6 +1270,10 @@ a {
       background-image: url(../images/social-06.svg); }
     .popup .ya-share2__item_service_vkontakte:after {
       content: "Вконтакте"; }
+    .popup .ya-share2__item_service_telegram:before {
+      background-image: url(../images/social-04.svg); }
+    .popup .ya-share2__item_service_telegram:after {
+      content: "Telegram"; }
 
 @media (max-width: 340px) {
   .progress {
